@@ -14,7 +14,24 @@ class Usuarios
       Console.Write("usuario:");
       string login = Console.ReadLine();
       Console.Write("senha (minimo 4 caracteres):");
-      string semha = Console.ReadLine();
+      string senha = Console.ReadLine();
+
+      if (login == ""|| senha.Length < 4)
+        {
+            Console.WriteLine("dados invalidos");
+        }
+        else if (logins.Contains(login))
+        {
+            Console.WriteLine("Esse usuario ja existe!");
+        }
+        else
+        {
+            nomes.Add(nome);
+            logins.Add(login);
+            senhas.Add(senha);
+            Console.WriteLine("usuarios cadrastado");
+
+        }
 
     }
 
