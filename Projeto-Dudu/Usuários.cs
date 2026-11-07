@@ -71,4 +71,22 @@ class Usuarios
         }
     }
 
+    public static void remover()
+    {
+        Console.Write("usuario a remover:");
+        string login = Console.ReadLine();
+        int i = logins.IndexOf(login);    // -1 se não achar 
+
+        if (i == -1)
+        {
+            Console.WriteLine("usuario mao encontrado.");
+            return;
+        } 
+        // remover das TRÊS listas, senão os dados se misturam
+        nomes.RemoveAt(i);
+        logins.RemoveAt(i);
+        senhas.RemoveAt(i);
+        Console.WriteLine("usuario removido!");
+    }
+
 }
