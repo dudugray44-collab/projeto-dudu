@@ -9,6 +9,7 @@ class Program
         {
             Console.WriteLine("1 - Cadastrar usuário");
             Console.WriteLine("2 - listar usuários");
+            Console.WriteLine("3 - buscar");
             Console.WriteLine("0 - sair");
             opcao =int.Parse(Console.ReadLine());
 
@@ -16,6 +17,7 @@ class Program
             {
                 case 1: Usuarios.Cadrastar(); break;
                 case 2: Usuarios.Listar(); break;
+                case 3: Usuarios.buscar();break;
             }
         }
     }
